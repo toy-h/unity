@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -11,35 +12,18 @@ namespace L20230712
     {
         static void Main(string[] args)
         {
-            int[,] map = {
-                {1,1,1,1,1,1,1,1,1,1 },
-                {1,0,0,0,0,0,0,0,0,1},
-            { 1,0,0,0,0,0,0,0,0,1}
-        };
+            int num =  1;
+            Console.Write(num + "는 " );
 
-            int PlayerY = 5;
-            int PlayerX = 3;
+            if (0 <= num && num <= 9)
 
+                Console.WriteLine("1자리의 수입니다");
 
-            for (int y = 0; y < 10; y++)
-            {
-                for (int x = 0; x < 10; x++)
-                {
-                    {
-                        if (PlayerX == x && PlayerY == y) ;
-
-                        else if (map[y, x] == 1)
-                        {
-                            Console.WriteLine("*");
-                        }
-
-
-
-                    }
-                }
+            else if (10 <= num && num <= 99)
+                Console.WriteLine("2자리의 수입니다.");
+            else if (100 <= num && num <= 999)
+                Console.WriteLine("3자리의 수입니다.");
+            else Console.WriteLine("4자리 이상의 수입니다.");
             }
         }
     }
-}
-    
-c
